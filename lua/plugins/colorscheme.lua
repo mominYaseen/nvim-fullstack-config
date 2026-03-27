@@ -2,17 +2,38 @@ return {
   "ellisonleao/gruvbox.nvim",
   priority = 1000,
   lazy = false,
+--  opts = {
 
-  config = function()
+ --   transparent = true, -- ✅ Enable transparent background
+ -- },
+
+  config = function(_, opts)
     require("gruvbox").setup({
       terminal_colors = true,
-      contrast = "hard"        -- or "soft", "medium"
+      contrast = "medium" -- or "soft", "medium"
+
     })
 
     vim.cmd("colorscheme gruvbox")
   end,
 }
 
+
+-- Sonokai Theme
+-- Sonokai Theme
+--return {
+--  -- https://github.com/sainnhe/sonokai
+--  "sainnhe/sonokai",
+--  lazy = false,    -- load immediately
+--  priority = 1000, -- load before other plugins
+--  config = function()
+--    vim.g.sonokai_style = "atlantis"
+--    vim.g.sonokai_enable_italic = true
+--    vim.g.sonokai_transparent_background = 1
+--
+--    vim.cmd.colorscheme("sonokai")
+--  end,
+--}
 --return {
 -- https://github.com/rebelot/kanagawa.nvim
 --  'rebelot/kanagawa.nvim',
