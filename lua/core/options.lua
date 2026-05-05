@@ -22,7 +22,7 @@ opt.ignorecase = true
 opt.smartcase = true
 
 -- Cursor Line
-opt.cursorline = true
+opt.cursorline = false
 
 -- Appearance
 opt.termguicolors = true
@@ -51,6 +51,7 @@ opt.mouse = ""
 
 -- Folding
 opt.foldlevel = 20
-opt.foldmethod = "expr"
-opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
+opt.foldmethod = "manual"
+opt.synmaxcol = 240 -- cap syntax highlight work on very long lines
+opt.lazyredraw = true -- avoid extra redraw while executing commands/macros
 
